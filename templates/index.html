@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+  <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner my-0">
+    <div class="carousel-item active">
+      <img src="/static/img/first.jpg" class="d-block w-100" alt="Beautiful nature landscape">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/second.jpg" class="d-block w-100" alt="Lake with Mountains at Sunset">
+
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+     <img src="/static/img/third.jpg" class="d-block w-100" alt="Forest Path in Nature">
+
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div class="container my-3 ">
+  <h2 class="my-2 text-center text-decoration-underline">Select as you want</h2>
+   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
+    <div class="col"> 
+      <div class="card shadow-sm rounded-4 border-0" style="background-color: rgba(153, 141, 141, 0.8);">
+         <img src="/static/img/shop.jpg" class="d-block w-100" alt="Forest Path in Nature">
+         <div class="card-body">
+           <p class="card-text text-white">🛍️ Shop: This tab showcases general retail products, offering users a broad selection of goods from various categories. It's designed with a clean product grid and filter options for easy browsing.</p>
+            <div class="d-flex justify-content-between align-items-center">
+               <div class="btn-group"> <button type="button" onclick="window.location.href='{% url 'contact' %}'" class="btn btn-sm btn-outline-secondary btn-primary text-white px-4">View</button> 
+              </div>
+                
+            </div> </div> </div>
+           </div> 
+           <div class="col"> 
+            <div class="card shadow-sm rounded-4 border-0 " style="background-color: rgba(153, 141, 141, 0.8);">
+               <img src="/static/img/medical.jpg" class="d-block w-100" alt="Forest Path in Nature">
+              <div class="card-body"> <p class="card-text text-white">💊 Medical: The Medical section is focused on health-related products and services. It includes over-the-counter medicines, prescription uploads, and access to wellness information — all with user safety and reliability in mind.</p> 
+                <div class="d-flex justify-content-between align-items-center"> 
+                  <div class="btn-group"> <button type="button" onclick="window.location.href='{% url 'contact' %}'" class="btn btn-sm btn-outline-secondary btn-primary text-white px-4">View</button> 
+                    </div>
+               </div>
+               </div> 
+              </div> 
+            </div>
+                <div class="col"> 
+                  <div class="card shadow-sm rounded-4 border-0" style="background-color: rgba(153, 141, 141, 0.8);"> 
+                  <img src="/static/img/ecommerce.jpg" class="d-block w-100" alt="Forest Path in Nature">
+                     <div class="card-body"> 
+                      <p class="card-text text-white">🛒 E-commerce: Serving as the platform’s full-featured digital marketplace, the E-commerce tab brings together multiple sellers and products, complete with cart functionality, order tracking, and a secure checkout system.</p> <div class="d-flex justify-content-between align-items-center"> 
+                        <div class="btn-group"><button type="button" onclick="window.location.href='{% url 'contact' %}'" class="btn btn-sm btn-outline-secondary btn-primary text-white px-4">View</button>
+                         </div>
+                         </div> </div>
+                         </div></div> 
+                         <div class="col"> 
+            <div class="card shadow-sm rounded-4 border-0" style="background-color: rgba(153, 141, 141, 0.8);">
+               <img src="/static/img/finance.jpg" class="d-block w-100" alt="Forest Path in Nature">
+              <div class="card-body"> <p class="card-text text-white">💼 Finance: This section provides tools and services related to personal and business finance — including digital wallets, bill payments, expense tracking, and even fintech integrations like loan or insurance info.</p> 
+                <div class="d-flex justify-content-between align-items-center"> 
+                  <div class="btn-group"> <button type="button" onclick="window.location.href='{% url 'contact' %}'" class="btn btn-sm btn-outline-secondary btn-primary text-white px-4">View</button>
+                      
+                    </div>
+               </div>
+               </div>
+               </div> 
+              </div>
+                <div class="col"> 
+                  <div class="card shadow-sm rounded-4 border-0" style="background-color: rgba(153, 141, 141, 0.8);"> 
+                  <img src="/static/img/grocery.jpg" class="d-block w-100" alt="Forest Path in Nature">
+                     <div class="card-body"> 
+                      <p class="card-text text-white">🥦 Grocery: A dedicated grocery tab enables users to browse fresh produce, daily essentials, and pantry items. It includes smart filtering (like category, freshness, and delivery slots), promoting convenience for everyday shopping.</p> <div class="d-flex justify-content-between align-items-center"> 
+                        <div class="btn-group"> <button type="button" onclick="window.location.href='{% url 'contact' %}'" class="btn btn-sm btn-outline-secondary btn-primary text-white px-4">View</button>
+                         </div> 
+                         </div> </div>
+                         </div></div> 
+                          </div>
+                         </div>
+{% endblock body %}

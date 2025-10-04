@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Services{% endblock title %}
+
+{% block body %}
+
+ <style>
+    body {
+      background-image: url('https://source.unsplash.com/1600x900/?ui,ux,design');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 60px 0;
+    }
+
+    .card, .card-body {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #000;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+<!--  UI/UX Projects Section -->
+<section class="bg-overlay">
+  <div class="container">
+    <h2 class="text-center mb-5">UI/UX Design Projects</h2>
+
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Health App UI</h5>
+            <p class="card-text">Clean and modern mobile UI for a health tracking app (Figma).</p>
+            <span class="badge bg-success">Free</span>
+            <a href="{% url "contact" %}" class="btn btn-outline-primary mt-3">View Design</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Web UI</h5>
+            <p class="card-text">High-fidelity Figma prototype for a fashion e-commerce platform.</p>
+            <span class="badge bg-danger">Paid</span>
+            <a href="#" class="btn btn-outline-primary mt-3">View Design</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Dashboard UX Case Study</h5>
+            <p class="card-text">User-centered design for a SaaS admin dashboard with usability testing.</p>
+            <span class="badge bg-success">Free</span>
+            <a href="#" class="btn btn-outline-primary mt-3">Read Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Client Reviews Section -->
+<section class="bg-overlay">
+  <div class="container">
+    <h2 class="text-center mb-5">Client Feedback</h2>
+
+    <div class="row g-4">
+      <!-- Review 1 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p>"The UI for my health app was sleek and intuitive. Very impressed!"</p>
+            <h6 class="text-muted mt-3">– Aniket R., Startup Founder</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p>"Beautiful designs and attention to detail. Our site conversion rate improved!"</p>
+            <h6 class="text-muted mt-3">– Dashrath P., E-commerce Manager</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p>"Professional and creative work. The Figma prototype was developer-ready."</p>
+            <h6 class="text-muted mt-3">– Nisha P., Product Owner</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  Footer -->
+<footer class="text-white text-center py-3 mt-5 bg-primary">
+  <p class="mb-0">&copy; 2025 Omkar Jadhav — UI/UX Designer</p>
+</footer>
+
+{% endblock body %}

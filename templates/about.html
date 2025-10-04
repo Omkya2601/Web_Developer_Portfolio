@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<style>
+    .about-section {
+        background-image: url("{% static 'img/about.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 1rem;
+        color: white;
+    }
+
+    .about-overlay {
+        background-color: rgba(36, 26, 26, 0.6);  
+        padding: 2rem;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+    }
+
+    footer {
+        background-color: #666464ff;
+    }
+</style>
+<div class="about-section">
+    <div class="about-overlay text-center">
+    <h1 class="mb-4 text-decoration-underline">About {{ developer_name }}</h1>
+    <p class="lead fw-bold">{{ bio }}</p>
+    <div class="my-4">
+    <p><strong>Years of Experience:</strong> {{ experience_years }}</p>
+    <p><strong>Projects Completed:</strong> {{ projects_count }}</p>
+    </div>
+    <h3 class="mt-5 text-decoration-underline">Core Skills</h3>
+    <ul class="list-group list-group-flush mt-3">
+         {% for skill in skills %}
+         <li class="list-group-item">{{ skill }}</li>
+        {% endfor %}
+     </ul>
+</div>
+</div>
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+        &copy; {{ developer_name }} {{ now|date:"Y" }}. All rights reserved.
+</footer>
+{% endblock body %}

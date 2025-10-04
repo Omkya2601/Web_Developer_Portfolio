@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}WebDev Tasks{% endblock title %}
+
+{% block body %}
+
+ <style>
+    <style>
+  body {
+    background-image: url('your-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: #fff; 
+  }
+
+  .bg-overlay {
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 50px 0;
+  }
+
+  .card, .card-body {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent cards */
+    color: #000;
+  }
+</style>
+
+  </style>
+
+<section class=" bg-overlay ">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio Website</h5>
+            <p class="card-text">A responsive portfolio site built with HTML, CSS, and Bootstrap.</p>
+            <span class="badge bg-danger">Paid</span>
+            <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Store</h5>
+            <p class="card-text">A full-stack e-commerce site with Django backend and Bootstrap UI.</p>
+            <span class="badge bg-danger">Paid</span>
+            <a href="{% url 'contact' %}" class="btn btn-outline-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Blog App</h5>
+            <p class="card-text">A blogging platform built with Django, includes comments, login, and admin panel.</p>
+            <span class="badge bg-success">Free</span>
+            <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Store Website</h5>
+            <p class="card-text">A Store platform built with Django, includes comments, login, and admin panel.</p>
+            <span class="badge bg-success">Free</span>
+            <a href="{% url 'contact' %}" class="btn btn-outline-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- Reviews-->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">What Clients Say</h2>
+
+    <div class="row g-4 ">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100" style="background-color: rgba(153, 141, 141, 0.8);">
+          <div class="card-body">
+            <p class="card-text">"Amazing work! Delivered my website ahead of time and exactly as requested."</p>
+            <h6 class="card-subtitle mt-3 text-muted">– Omkar J., Business Owner</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Highly professional, great communication and top-quality code. Recommended!"</p>
+            <h6 class="card-subtitle mt-3 text-muted">– Supriya N., Freelancer</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Very talented developer. I got exactly what I needed for my online shop."</p>
+            <h6 class="card-subtitle mt-3 text-muted">– Priya W., Store Owner</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3 mt-5">
+  <p class="mb-0">&copy; 2025 Omkar Jadhav. All rights reserved.</p>
+</footer>
+
+{% endblock body %}

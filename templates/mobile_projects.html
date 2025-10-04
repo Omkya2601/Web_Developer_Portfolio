@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Mobile App Projects{% endblock %}
+
+{% block body %}
+<style>
+  body {
+    background-image: url('https://source.unsplash.com/1600x900/?mobile,app');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+  }
+
+  .bg-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 60px 0;
+  }
+
+  .card, .card-body {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+  }
+
+  h2 {
+    color: #fff;
+  }
+</style>
+
+<section class="bg-overlay">
+  <div class="container">
+    <h2 class="text-center mb-5">Mobile App Projects</h2>
+
+    <div class="row g-4">
+      {% for project in projects %}
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">{{ project.name }}</h5>
+        <p class="card-text">{{ project.description }}</p>
+
+        {% if project.is_paid %}
+          <span class="badge bg-danger">Paid</span>
+          <a href="{% url 'start_payment' project.id %}" class="btn btn-outline-primary mt-3">View Project</a>
+        {% else %}
+          <span class="badge bg-success">Free</span>
+          <a href="{{ project.github_url }}" class="btn btn-outline-primary mt-3" target="_blank">View Project</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

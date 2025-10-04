@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services{% endblock title %}
+
+{% block body %}
+ <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg-container {
+            background-image: url("{% static 'img/services.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: rgba(136, 128, 128, 0.9);
+        }
+    </style>
+
+<div class="bg-container">
+    <div class="card mb-3 h-50 text-white text-center rounded-4 border-0" style="width: 18rem;background-color: rgba(153, 141, 141, 0.8);">
+        <div class="card-body">
+            <h5 class="card-title">💻 Web Development</h5>
+            <p class="card-text">We craft high-performance, responsive, and scalable websites tailored to your business goals. From landing pages to full-scale web applications, we combine modern technologies with clean design to deliver seamless digital experiences across all devices.</p>
+            <a href="{% url 'webdev' %}" class="btn btn-primary">Go to through >></a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-3 h-50 text-white rounded-4 border-0" style="width: 18rem;background-color: rgba(153, 141, 141, 0.8);">
+        <div class="card-body">
+            <h5 class="card-title">📱 Mobile App Development</h5>
+            <p class="card-text">We build intuitive, feature-rich mobile applications for Android and iOS platforms. Whether you're launching a startup or scaling your business, our mobile solutions are designed for speed, usability, and user engagement.</p>
+            <a href="{% url 'mobileapp' %}" class="btn btn-primary">Go through>></a>
+        </div>
+    </div>
+
+    <div class="card text-end h-50 text-center text-white rounded-4 border-0" style="width: 18rem;background-color: rgba(153, 141, 141, 0.8);">
+        <div class="card-body">
+            <h5 class="card-title">🎨 UI/UX Design</h5>
+            <p class="card-text">We create engaging, user-centered designs that enhance the experience of your product. Our UI/UX process focuses on intuitive navigation, visual consistency, and accessibility — ensuring every interaction feels natural and meaningful.</p>
+            <a href="{% url 'design' %}" class="btn btn-primary">Go through>></a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}

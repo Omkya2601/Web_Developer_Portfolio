@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Mobile App development{% endblock title %}
+
+{% block body %}
+ <style>
+    body {
+      background-image: url('https://source.unsplash.com/1600x900/?mobile,app');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 60px 0;
+    }
+
+    .card, .card-body {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+
+<!--  Projects Section -->
+<section class="bg-overlay">
+  <div class="container">
+    <h2 class="text-center mb-5">Mobile App Projects</h2>
+
+    <div class="row g-4">
+      <!-- Free App -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Task Tracker App</h5>
+            <p class="card-text">A lightweight task manager for Android, built with Flutter.</p>
+            <span class="badge bg-success">Free</span>
+            <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paid App -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Mobile App</h5>
+            <p class="card-text">Cross-platform app for online shopping, built with React Native.</p>
+            <span class="badge bg-danger">Paid</span>
+            <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Free App -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Fitness Tracker</h5>
+            <p class="card-text">A fitness logging app using Kotlin for native Android.</p>
+            <span class="badge bg-success">Free</span>
+            <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="bg-overlay">
+  <div class="container">
+    <h2 class="text-center mb-5">Client Reviews</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Absolutely nailed my app idea. Smooth UI and clean code!"</p>
+            <h6 class="card-subtitle mt-3 text-muted">– Pratiksha B., Startup Founder</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Great experience! The ecommerce app helped boost my sales."</p>
+            <h6 class="card-subtitle mt-3 text-muted">– Prashant K., Shop Owner</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Fast delivery and high quality work. Would hire again!"</p>
+            <h6 class="card-subtitle mt-3 text-muted">– Balaji B., Freelancer</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  Footer -->
+<footer class="text-white text-center py-3">
+  <p class="mb-0">&copy; 2025 Omkar Jadhav — Mobile App Developer</p>
+</footer>
+
+{% endblock body %}
